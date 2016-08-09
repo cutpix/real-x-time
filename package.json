@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "prestart": "node tools/start-message",
-    "start": "webpack-dev-server --config webpack.config.dev.js"
+    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js --progress --colors"
   },
   "author": "Andrew Pavlyuk",
   "license": "ISC",

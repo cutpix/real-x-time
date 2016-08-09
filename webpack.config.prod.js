@@ -2,19 +2,14 @@ var webpack = require('webpack');
 var path = require('path');
 
 var config = {
-    noInfo: true,
-    debug: true,
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
     entry: [
-        'webpack-dev-server/client?http://localhost:3000',
-        'webpack/hot/dev-server',
         path.resolve(__dirname, 'source/app.client')
     ],
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js'
     },
-    watch: true,
     resolve: {
         root: path.resolve(__dirname, 'source'),
         alias: {},
@@ -22,8 +17,16 @@ var config = {
         extensions: ['', '.js', '.jsx']
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+            minimize: true,
+            compress: { warnings: false }
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
+        })
     ],
     module: {
         loaders: [
@@ -40,12 +43,6 @@ var config = {
                 loader: 'style!css'
             }
         ]
-    },
-    devServer: {
-        port: 3000,
-        hot: true,
-        contentBase: path.resolve(__dirname, 'public'),
-        colors: true
     }
 };
 
