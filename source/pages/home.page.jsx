@@ -1,35 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
-import KanbanBoard from '../components/kanban-board';
-
-const cardsList = [
-    {
-        id: 1,
-        title: 'Card One title',
-        description: 'Card detailed description.',
-        status: 'todo',
-        tasks: [
-            { id: 1, name: 'Task One', done: true },
-            { id: 2, name: 'Task Two', done: false },
-            { id: 3, name: 'Task Three', done: false }
-        ]
-    },
-    {
-        id: 2,
-        title: 'Card Two title',
-        description: 'Card detailed description',
-        status: 'in-progress',
-        tasks: []
-    },
-    {
-        id: 3,
-        title: 'Card Three title',
-        description: 'Card detailed description',
-        status: 'done',
-        tasks: []
-    },
-];
 
 class HomePage extends Component {
     render() {
