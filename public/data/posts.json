@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "url": "how-to-use-webpack-es6-react-tutorial",
+        "title": "Разработка современных веб-приложений \"Webpack + Babel + ES6 + React\"",
+        "description": "Как создавать современные веб-приложений используя язык JavaScript и все его вкусности.",
+        "author": {
+            "photo": "/images/photo-dice.jpg",
+            "name": "Andrew Pavlyuk"
+        }
+    }
+]
