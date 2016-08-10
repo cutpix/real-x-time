@@ -4,6 +4,9 @@ Icon
 # Thumbnails
 ._*
 
+# Build
+public/bundle.*
+
 ### Node ###
 # Logs
 logs
