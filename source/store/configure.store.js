@@ -1,5 +1,5 @@
 import {createStore, applyMiddleware} from 'redux';
-import rootReducer from '../reducers';
+import rootReducer from '../reducers/root.reducer';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 
 // good way to initialize your store with some state 
