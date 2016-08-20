@@ -20,7 +20,7 @@ const authors = [
 
 class AuthorApi {
     static getAllAuthors() {
-
+        return Object.assign([], authors);
     }
 
     static saveAuthor(author) {
