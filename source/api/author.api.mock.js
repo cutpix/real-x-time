@@ -12,9 +12,9 @@ const authors = [
         lastName: 'Savchuk'
     },
     {
-        id: 'vladimir-olifer',
-        firstName: 'Vladimir',
-        lastName: 'Olifer'
+        id: 'cory-house',
+        firstName: 'Cory',
+        lastName: 'House'
     }
 ];
 

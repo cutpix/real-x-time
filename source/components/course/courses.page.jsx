@@ -1,19 +1,12 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as courseActions from '../actions/course.actions';
-
+import * as courseActions from '../../actions/course.actions';
+import CourseList from './course.list';
 
 class CoursesPage extends Component {
     constructor(props, context) {
         super(props, context);
-    }
-
-    // child functions that is called in render func
-    courseRow(course, index) {
-        return (
-            <div key={index}>{course.title}</div>
-        );
     }
 
     render() {
@@ -21,9 +14,7 @@ class CoursesPage extends Component {
             <div className="page-content">
                 <div className="container clearfix">
                     <h1 className="title">Courses</h1>
-                    {
-                        this.props.courses.map(this.courseRow)
-                    }
+                    <CourseList courses={this.props.courses} />
                 </div>
             </div>
         );
@@ -44,11 +35,10 @@ function mapStateToProps(state, ownProps) {
     };
 }
 
-//
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(courseActions, dispatch)
-//      createCourse: course => dispatch(courseActions.createCourse(course))
+        //createCourse: course => dispatch(courseActions.createCourse(course))
     };
 }
 

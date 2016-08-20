@@ -1,0 +1,43 @@
+.course-list {
+    margin: 15px 0;
+}
+
+.course-row {
+    position: relative;
+    padding: 0 0 1em 45px;
+    border-top: 1px solid #f1f1f1;
+    overflow: hidden;
+}
+
+.course-row .body {
+    padding: 1em 0 0;
+    overflow: hidden;
+    font-size: 14px;
+    border-bottom: 0;
+}
+
+.course-row .title {
+    padding: 0;
+    font-weight: 600;
+}
+
+.course-row .title a {
+    color: #4078c0;
+}
+
+.course-row .title a:hover {
+    text-decoration: underline;
+}
+
+.course-row .details {
+    font-size: 12px;
+    color: #767676;
+}
+
+.course-row .category-icon {
+    position: absolute;
+    display: block;
+    top: 18px;
+    left: 8.5px;
+    height: 28px;
+}

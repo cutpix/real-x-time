@@ -57,6 +57,7 @@ li {
 .container {
     width: 1000px;
     margin: 0 auto;
+    max-width: 90%;
 }
 
 .clearfix::before, .clearfix::after, .columns::before, .columns::after {
@@ -130,6 +131,10 @@ svg:not(:root) {
 
 .page-content {
     padding-top: 20px;
+}
+
+.page-content .container {
+    padding: 0 10px;
 }
 
 .title {

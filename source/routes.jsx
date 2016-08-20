@@ -1,10 +1,10 @@
 import React from 'react';
 import {Route, IndexRoute} from 'react-router';
 
-import Layout from './pages/layout';
-import HomePage from './pages/home.page';
-import ProfilePage from './pages/profile.page';
-import CoursesPage from './pages/courses.page';
+import Layout from './components/layout';
+import HomePage from './components/home/home.page';
+import ProfilePage from './components/profile/profile.page';
+import CoursesPage from './components/course/courses.page';
 
 
 export default (

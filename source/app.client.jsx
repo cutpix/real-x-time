@@ -2,12 +2,13 @@ import React from 'react';
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import {Router, browserHistory} from 'react-router';
-
-import configureStore from './store/configure.store';
-import 'css/styles.css';
 import routes from './routes';
 
+import configureStore from './store/configure.store';
 import {loadCourses} from './actions/course.actions';
+
+import 'css/styles.css';
+import 'css/components.css';
 
 
 const store = configureStore();
