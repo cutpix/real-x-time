@@ -7,13 +7,13 @@ var config = {
         path.resolve(__dirname, 'source/app.client')
     ],
     output: {
-        path: path.resolve(__dirname, 'public'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     resolve: {
         root: path.resolve(__dirname, 'source'),
         alias: {},
-        modulesDirectories: ['node_modules', 'bower_components', 'public'],
+        modulesDirectories: ['node_modules', 'bower_components', 'dist'],
         extensions: ['', '.js', '.jsx']
     },
     plugins: [

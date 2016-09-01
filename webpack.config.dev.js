@@ -11,14 +11,14 @@ var config = {
         path.resolve(__dirname, 'source/app.client')
     ],
     output: {
-        path: path.resolve(__dirname, 'public'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     watch: true,
     resolve: {
         root: path.resolve(__dirname, 'source'),
         alias: {},
-        modulesDirectories: ['node_modules', 'bower_components', 'public'],
+        modulesDirectories: ['node_modules', 'bower_components', 'dist'],
         extensions: ['', '.js', '.jsx']
     },
     plugins: [
@@ -44,7 +44,7 @@ var config = {
     devServer: {
         port: 3000,
         hot: true,
-        contentBase: path.resolve(__dirname, 'public'),
+        contentBase: path.resolve(__dirname, 'dist'),
         colors: true
     }
 };
