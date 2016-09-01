@@ -13,6 +13,7 @@ const courses = [
         id: 'ecmascript-6-es6-modules-es2015-import-and-export',
         title: 'ES6 Modules (ES2015) - Import and Export',
         ext_url: 'https://egghead.io/lessons/ecmascript-6-es6-modules-es2015-import-and-export',
+        length: '0:08',
         category: 'JavaScript'
     }
 ];
