@@ -26,6 +26,10 @@ class CourseApi {
             }, delay);
         });
     }
+
+    static saveCourse(course) {
+        
+    }
 }
 
 export default CourseApi;
