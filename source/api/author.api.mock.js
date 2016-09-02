@@ -20,7 +20,11 @@ const authors = [
 
 class AuthorApi {
     static getAllAuthors() {
-        return Object.assign([], authors);
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(Object.assign([], authors));
+            });
+        });
     }
 
     static saveAuthor(author) {
