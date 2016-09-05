@@ -6,7 +6,7 @@ const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => 
 
     return (
         <form>
-            <h1>Manage Course Form</h1>
+            <h1>Manage Course</h1>
             <TextInput
                 name="title"
                 label="Title"
@@ -15,13 +15,13 @@ const CourseForm = ({course, allAuthors, onSave, onChange, loading, errors}) => 
                 error={errors.title} />
 
             <SelectInput
-                name="authorId"
+                name="author_id"
                 label="Author"
-                value={course.authorId}
+                value={course.author_id}
                 defaultOption="Select Author"
                 options={allAuthors}
                 onChange={onChange}
-                error={errors.authorId} />
+                error={errors.author_id} />
 
             <TextInput
                 name="category"

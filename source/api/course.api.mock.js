@@ -18,6 +18,15 @@ const courses = [
     }
 ];
 
+function replaceAll(str, find, replace) {
+    return str.replace(new RegExp(find, 'g'), replace);
+}
+
+//This would be performed on the server in a real app. Just stubbing in.
+const generateId = (course) => {
+    return replaceAll(course.title, ' ', '-');
+};
+
 class CourseApi {
     static getAllCourses() {
         return new Promise((resolve, reject) => {
@@ -28,7 +37,22 @@ class CourseApi {
     }
 
     static saveCourse(course) {
-        
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (course.id) {
+                    const existingCourseIndex = courses.findIndex(x => x.id === course.id);
+                    courses.splice(existingCourseIndex, 1, course);
+                } else {
+                    course.id = generateId(course);
+                    course.ext_url = `https://google.com/#q=${course.id}`;
+                    courses.push(course);
+                    debugger;
+                }
+
+                debugger;
+                resolve(Object.assign({}, course));
+            }, delay);
+        });
     }
 }
 

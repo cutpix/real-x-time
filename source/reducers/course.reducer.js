@@ -6,12 +6,18 @@ export default function courseReducer(state = initialState.courses, action) {
         case types.LOAD_COURSES_SUCCESS:
             return action.courses;
 
-        case types.CREATE_COURSE:
+        case types.CREATE_COURSE_SUCCESS:
             // state.push(action.course);
             // return state;
             // create new array with extra value using spread operator (...)
             return [...state, Object.assign({}, action.course)];
-            
+
+        case types.UPDATE_COURSE_SUCCESS:
+            return [
+                ...state.filter(course => course.id !== action.courseId),
+                Object.assign({}, action.course)
+            ];
+
         default:
             return state;
     }
