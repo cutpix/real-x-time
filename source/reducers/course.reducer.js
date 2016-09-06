@@ -10,11 +10,14 @@ export default function courseReducer(state = initialState.courses, action) {
             // state.push(action.course);
             // return state;
             // create new array with extra value using spread operator (...)
-            return [...state, Object.assign({}, action.course)];
+            return [
+                ...state,
+                Object.assign({}, action.course)
+            ];
 
         case types.UPDATE_COURSE_SUCCESS:
             return [
-                ...state.filter(course => course.id !== action.courseId),
+                ...state.filter(course => course.id !== action.course.id),
                 Object.assign({}, action.course)
             ];
 

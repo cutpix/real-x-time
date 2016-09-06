@@ -46,10 +46,7 @@ class CourseApi {
                     course.id = generateId(course);
                     course.ext_url = `https://google.com/#q=${course.id}`;
                     courses.push(course);
-                    debugger;
                 }
-
-                debugger;
                 resolve(Object.assign({}, course));
             }, delay);
         });
