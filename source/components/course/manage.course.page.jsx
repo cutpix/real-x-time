@@ -19,8 +19,12 @@ class ManageCoursePage extends Component {
         this.saveCourse = this.saveCourse.bind(this);
     }
 
+    // update local state then the props change
     componentWillReceiveProps(nextProps) {
         debugger;
+        if (this.props.course.id !== nextProps.course.id) {
+            this.setState({ course: Object.assign({}, nextProps.course) });
+        }
     }
 
     updateCourseState(event) {
