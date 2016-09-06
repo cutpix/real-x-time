@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux';
 import * as courseActions from '../../actions/course.actions';
 import PageContent from '../common/page.content';
 import CourseForm from './course.form';
+import toastr from 'toastr';
 
 
 class ManageCoursePage extends Component {
@@ -47,6 +48,7 @@ class ManageCoursePage extends Component {
 
     redirect() {
         this.setState({ saving: false });
+        toastr.success('Course saved');
         this.context.router.push('/courses');
     }
 
