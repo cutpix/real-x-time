@@ -39,6 +39,11 @@ class CourseApi {
     static saveCourse(course) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
+                const minCourseTitleLength = 1;
+                if (course.title.length < minCourseTitleLength) {
+                    reject(`Title must be at least ${minCourseTitleLength} characters.`);
+                }
+
                 if (course.id) {
                     const existingCourseIndex = courses.findIndex(x => x.id === course.id);
                     courses.splice(existingCourseIndex, 1, course);
