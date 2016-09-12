@@ -1,25 +1,29 @@
-var webpack = require('webpack');
-var path = require('path');
+import webpack from 'webpack';
+import path from 'path';
 
-var config = {
-    noInfo: true,
+export default {
     debug: true,
-    devtool: 'eval-source-map',
+    devtool: 'cheap-module-eval-source-map',
+    noInfo: false,
     entry: [
-        'webpack-dev-server/client?http://localhost:3000',
-        'webpack/hot/dev-server',
-        path.resolve(__dirname, 'source/app.client')
+        'webpack-hot-middleware/client?reload=true',
+        './source/app.client'
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
         filename: 'bundle.js'
     },
-    watch: true,
     resolve: {
         root: path.resolve(__dirname, 'source'),
         alias: {},
         modulesDirectories: ['node_modules', 'bower_components', 'dist'],
         extensions: ['', '.js', '.jsx']
+    },
+    target: 'web',
+    devServer: {
+        port: 3000,
+        contentBase: './source'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -40,13 +44,5 @@ var config = {
                 loader: 'style!css'
             }
         ]
-    },
-    devServer: {
-        port: 3000,
-        hot: true,
-        contentBase: path.resolve(__dirname, 'dist'),
-        colors: true
     }
 };
-
-module.exports = config;

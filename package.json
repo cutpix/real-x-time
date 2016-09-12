@@ -2,9 +2,8 @@
   "name": "real-x-time",
   "version": "1.0.0",
   "scripts": {
-    "prestart": "node tools/start-message",
-    "start": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js --progress --colors"
+    "prestart": "node tools/messenger",
+    "start": "babel-node tools/server.js"
   },
   "author": "Andrew Pavlyuk",
   "license": "ISC",
