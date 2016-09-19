@@ -6,6 +6,7 @@ import routes from './routes';
 import configureStore from './store/configure.store';
 import {loadCourses} from './actions/course.actions';
 import {loadAuthors} from './actions/author.actions';
+import {loadLoginProviders} from './actions/auth.actions';
 import 'css/styles.css';
 import 'css/components.css';
 import 'toastr/build/toastr.min.css';
@@ -13,6 +14,7 @@ import 'toastr/build/toastr.min.css';
 const store = configureStore();
 store.dispatch(loadCourses());
 store.dispatch(loadAuthors());
+store.dispatch(loadLoginProviders());
 
 render(
     <Provider store={store}>
