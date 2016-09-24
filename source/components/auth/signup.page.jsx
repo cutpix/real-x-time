@@ -14,7 +14,8 @@ class SignupPage extends Component {
 
         this.state = {
             model: Object.assign({}, this.props.model),
-            errors: {}
+            errors: {},
+            isLoading: false
         };
 
         this.updateModelState = this.updateModelState.bind(this);
@@ -36,10 +37,20 @@ class SignupPage extends Component {
 
     signupUser(event) {
         event.preventDefault();
-
+        this.setState({ isLoading: true });
         this.props.actions.userSignupRequest(this.state.model)
-            .catch(error => {
+            .catch((error) => {
+                this.setState({ isLoading: false });
                 toastr.error(error);
+
+                // todo: move this code to api call wrapper in promise 
+                var modelErrors = error.response.data.modelState;
+                this.setState({
+                    errors: {
+                        username: modelErrors['model.Username'],
+                        email: modelErrors['model.Email']
+                    }
+                });
             });
     }
 
@@ -50,7 +61,8 @@ class SignupPage extends Component {
                     model={this.state.model}
                     onChange={this.updateModelState}
                     onSubmit={this.signupUser}
-                    errors={this.state.errors} />
+                    errors={this.state.errors}
+                    isLoading={this.state.isLoading} />
 
                 <ExternalLoginList providers={this.props.externalLogins} />
             </PageContent>

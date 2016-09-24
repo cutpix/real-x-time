@@ -4,7 +4,7 @@ import PasswordInput from '../common/password.input';
 import SelectInput from '../common/select.input';
 
 
-const SignupForm = ({model, onChange, onSubmit, errors}) => {
+const SignupForm = ({model, onChange, onSubmit, errors, isLoading}) => {
     return (
         <form onSubmit={onSubmit}>
             <h1>Sign up page</h1>
@@ -46,7 +46,7 @@ const SignupForm = ({model, onChange, onSubmit, errors}) => {
                 onChange={onChange}
                 error={errors.timezoneId} />
 
-            <button className="btn btn-primary" type="submit">Sign up</button>
+            <button className="btn btn-primary" type="submit" disabled={isLoading}>Sign up</button>
         </form>
     );
 };
