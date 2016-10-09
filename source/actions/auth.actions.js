@@ -3,11 +3,8 @@ import axios from 'axios';
 import {beginAjaxCall, ajaxCallError} from './ajax.status.actions';
 
 
-
 export function userSignupRequestSuccess() {
-    return {
-        type: types.USER_SIGNUP_REQUEST_SUCCESS
-    };
+    return { type: types.USER_SIGNUP_REQUEST_SUCCESS };
 }
 
 export function loadExternalLoginsSuccess(externalLogins) {
@@ -17,26 +14,38 @@ export function loadExternalLoginsSuccess(externalLogins) {
     };
 }
 
+
+const config = {
+    baseURL: 'http://localhost:7775/'
+};
+
+// const clientHost = 'http://localhost:3000/';
+
+
 // thunks
 export function userSignupRequest(userData) {
-    const config = {
-        baseURL: 'http://localhost:7775/'
-    };
     return dispatch => {
-        return axios.post('/api/account/signup', userData, config).then(response => {
-            dispatch(userSignupRequestSuccess());
-        }).catch(error => {
-            throw (error);
+        return axios.post('/api/account/signup', userData, config)
+            .then(response => {
+                dispatch(userSignupRequestSuccess());
+            }).catch(error => {
+                throw (error);
+            });
+    };
+}
+
+export function externalSignupRequest(url){
+    debugger;
+    return dispatch => {
+        return new Promise((resolve, reject) => {
+            resolve();
         });
     };
 }
 
 export function loadLoginProviders() {
-    const config = {
-        baseURL: 'http://localhost:7775/'
-    };
     return dispatch => {
-        return axios.get('/api/account/external-logins?returnUrl=%2F&generateState=true', config)
+        return axios.get('/api/account/external-logins?returnUrl=http://localhost:3000', config)
             .then(res => {
                 dispatch(loadExternalLoginsSuccess(res.data));
             });

@@ -4,6 +4,9 @@ Icon
 # Thumbnails
 ._*
 
+# Typings
+typings
+
 # Build
 public/bundle.*
 

@@ -1,12 +1,13 @@
 import React, {PropTypes} from 'react';
+import SocialLogin from './social.login';
 
 
-const ExternalLoginList = ({providers}) => {
+const ExternalLoginList = ({providers, callback}) => {
     return (
         <div className="external-login-list">
             {
                 providers.map(provider =>
-                    <a href={provider.url} key={provider.name}>{provider.name}</a>
+                    <SocialLogin key={provider.name} provider={provider} callback={callback} />
                 )
             }
         </div>

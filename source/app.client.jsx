@@ -12,6 +12,7 @@ import 'css/components.css';
 import 'toastr/build/toastr.min.css';
 
 const store = configureStore();
+
 store.dispatch(loadCourses());
 store.dispatch(loadAuthors());
 store.dispatch(loadLoginProviders());

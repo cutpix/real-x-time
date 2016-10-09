@@ -20,6 +20,8 @@ class SignupPage extends Component {
 
         this.updateModelState = this.updateModelState.bind(this);
         this.signupUser = this.signupUser.bind(this);
+        this.handleSocialSignup = this.handleSocialSignup.bind(this);
+        this.redirect = this.redirect.bind(this);
     }
 
     updateModelState(event) {
@@ -39,12 +41,14 @@ class SignupPage extends Component {
         event.preventDefault();
         this.setState({ isLoading: true });
         this.props.actions.userSignupRequest(this.state.model)
+            .then(() => this.redirect())
             .catch((error) => {
                 this.setState({ isLoading: false });
                 toastr.error(error);
 
                 // todo: move this code to api call wrapper in promise 
                 var modelErrors = error.response.data.modelState;
+
                 this.setState({
                     errors: {
                         username: modelErrors['model.Username'],
@@ -52,6 +56,15 @@ class SignupPage extends Component {
                     }
                 });
             });
+    }
+
+    handleSocialSignup(login) {
+        this.context.router.push('/signup-' + login.provider.toLowerCase());
+    }
+
+    redirect() {
+        this.setState({ isLoading: false });
+        this.context.router.push('/');
     }
 
     render() {
@@ -64,7 +77,9 @@ class SignupPage extends Component {
                     errors={this.state.errors}
                     isLoading={this.state.isLoading} />
 
-                <ExternalLoginList providers={this.props.externalLogins} />
+                <ExternalLoginList
+                    providers={this.props.externalLogins}
+                    callback={this.handleSocialSignup} />
             </PageContent>
         );
     }

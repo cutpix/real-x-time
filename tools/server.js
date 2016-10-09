@@ -20,8 +20,8 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 app.use(express.static(path.join(__dirname, '../dist')));
 
-app.get('*', function (request, response) {
-    response.sendFile(path.join(__dirname, '../dist/index.html'));
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 /*eslint-disable no-console */
