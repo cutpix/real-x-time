@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "./tools/server.js",
   "scripts": {
-    "start": "set NODE_ENV=development&&babel-node tools/server"
+    "start": "babel-node tools/server"
   },
   "author": "Andrei Pavlyuk <devdice@outlook.com>",
   "license": "ISC",

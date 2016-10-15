@@ -1,6 +1,8 @@
 import webpack from 'webpack';
 import path from 'path';
 
+process.env.NODE_ENV = 'development';
+
 export default {
     debug: true,
     devtool: 'cheap-module-eval-source-map',
@@ -28,7 +30,12 @@ export default {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify('development')
+            }
+        })
     ],
     module: {
         loaders: [

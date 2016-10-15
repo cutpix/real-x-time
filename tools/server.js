@@ -4,15 +4,18 @@ import path from 'path';
 import open from 'open';
 
 import config from '../webpack.config.dev';
-import notifier from './notifier';
+import { createLogger } from './logger';
 
-const logger = notifier(process.env);
+const logger = createLogger(process.env);
+logger.builded();
+
+const scheme = 'http';
 const port = config.devServer.port;
 const hostname = config.devServer.hostname;
+const url = `${scheme}://${hostname}:${port}`;
 const app = express();
 const compiler = webpack(config);
 
-logger.print('ENV');
 
 app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
@@ -28,14 +31,12 @@ app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
-/* eslint-disable no-console */
 
-const hostUrl = `http://${hostname}:${port}`;
 app.listen(port, hostname, function (error) {
     if (error) {
-        logger.print('ERROR', error);
+        return logger.error(error.message);
     } else {
-        logger.print('SUCCESS', `Server running at ${hostUrl}`);
-        open(hostUrl);
+        logger.started(url);
+        open(url);
     }
 });
