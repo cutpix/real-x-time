@@ -1,6 +1,6 @@
 import * as types from './action.types';
 import axios from 'axios';
-import {beginAjaxCall, ajaxCallError} from './ajax.status.actions';
+import { beginAjaxCall, ajaxCallError } from './ajax.status.actions';
 
 
 export function userSignupRequestSuccess() {
@@ -34,7 +34,7 @@ export function userSignupRequest(userData) {
     };
 }
 
-export function externalSignupRequest(url){
+export function externalSignupRequest(url) {
     debugger;
     return dispatch => {
         return new Promise((resolve, reject) => {
