@@ -19,8 +19,7 @@ const config = {
     baseURL: 'http://localhost:7775/'
 };
 
-// const clientHost = 'http://localhost:3000/';
-
+const clientHost = 'http://localhost:3000';
 
 // thunks
 export function userSignupRequest(userData) {
@@ -44,7 +43,7 @@ export function externalSignupRequest(url) {
 
 export function loadLoginProviders() {
     return dispatch => {
-        return axios.get('/api/account/external-logins?returnUrl=http://localhost:3000', config)
+        return axios.get('/api/account/external-logins?returnUrl=' + clientHost, config)
             .then(res => {
                 dispatch(loadExternalLoginsSuccess(res.data));
             });

@@ -17,8 +17,9 @@ class SocialLogin extends Component {
             'location=0,status=0,width=600,height=750'
         );
         let interval = window.setInterval(() => {
-            if (extWindow.location.href.indexOf('/signup')) {
-                clearInterval(interval);
+            const isSameDomain = extWindow.document.domain === window.document.domain;
+            if (isSameDomain && extWindow.location.href.indexOf('/signup')) {
+                window.clearInterval(interval);
 
                 const url = extWindow.document.URL;
                 let queryString = url.substring(url.indexOf('#') + 1);
@@ -29,10 +30,24 @@ class SocialLogin extends Component {
                     function ($0, $1, $2, $3) { login[$1] = $3; }
                 );
 
-                extWindow.close();
                 this.props.callback(login);
+
+                extWindow.close();
             }
 
+            // if (extWindow.closed) {
+            //     window.clearInterval(interval);
+            //     const url = extWindow.document.URL;
+            //     let queryString = url.substring(url.indexOf('#') + 1);
+
+            //     const login = {};
+            //     queryString.replace(
+            //         new RegExp('([^?=&]+)(=([^&]*))?', 'g'),
+            //         function ($0, $1, $2, $3) { login[$1] = $3; }
+            //     );
+
+            //     this.props.callback(login);
+            // }
 
         }, 1000);
     }
