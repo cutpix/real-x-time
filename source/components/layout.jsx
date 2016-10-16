@@ -1,10 +1,10 @@
-import React, {PropTypes} from 'react';
-import {connect} from 'react-redux';
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import Header from './common/header';
 
 const Layout = (props) => {
     return (
-        <div className="page">
+        <div className='page'>
             <Header loading={props.loading} />
             {props.children}
         </div>

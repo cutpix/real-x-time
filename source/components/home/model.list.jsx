@@ -3,7 +3,7 @@ import ModelItem from './model.item';
 
 const ModelList = ({data}) => {
     return (
-        <div className={"model-list"}>
+        <div className='model-list'>
             {
                 data.map((model, i) =>
                     <ModelItem key={i} item={model} />

@@ -9,7 +9,7 @@ typings*
 jsconfig.*
 
 # Build
-public/bundle.*
+dist/bundle.*
 
 ### Node ###
 # Logs

@@ -24,6 +24,7 @@ export default {
     },
     target: 'web',
     devServer: {
+        scheme: 'http',
         hostname: 'localhost',
         port: 3000,
         contentBase: './source'

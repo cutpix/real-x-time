@@ -1,6 +1,10 @@
-/* eslint-disable no-console */
-
 import colors from 'colors';
+import builder from './message.builder';
+
+export function createLogger(env) {
+    const notifier = new Logger(env);
+    return notifier;
+}
 
 export default class Logger {
     constructor(env) {
@@ -9,36 +13,19 @@ export default class Logger {
         };
     }
 
-    builded() {
-        const buildMessage = getEnvBuildMessage(this.env.mode);
-        console.log(buildMessage);
+    /* eslint-disable no-console */
+
+    printStart(url) {
+        const envModeMsg = builder.getEnvModeMessage(this.env.mode);
+        const startMsg = builder.getStartMessage(url);
+        console.log(envModeMsg);
+        console.log(startMsg);
     }
 
-    started(url) {
-        const startMessage = `Server is started on ${url}`;
-        console.log(startMessage.blue.bold);
+    printError(text) {
+        const message = builder.getErrorMessage(text);
+        console.error(message);
     }
 
-    error(message) {
-        console.error(message.red.bold);
-    }
-}
-
-
-export function createLogger(env) {
-    const notifier = new Logger(env);
-    return notifier;
-}
-
-// private helpers
-function getEnvBuildMessage(mode) {
-    let msg = 'Running application in '.green.bold;
-
-    if (mode === 'development') {
-        return msg += '['.red + (mode) + ']'.red + ' mode'.green.bold;
-    } else if (mode === 'production') {
-        return msg += '['.blue + (mode) + ']'.blue + ' mode'.green.bold;
-    } else {
-        return `Running application without environment variable: ${mode}`.red.bold;
-    }
+    /* eslint-enable no-console */
 }

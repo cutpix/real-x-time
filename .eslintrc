@@ -15,7 +15,16 @@
         "node": true,
         "jquery": true
     },
+    "globals": {
+        "__DEV__": false,
+        "__PROD__": false,
+        "__TEST__": false
+    },
     "rules": {
+        "jsx-quotes": [
+            2,
+            "prefer-single"
+        ],
         "semi": [
             "error",
             "always"
@@ -25,7 +34,7 @@
             "single"
         ],
         "no-console": 1,
-        "no-var": 0,
+        "no-var": 1,
         "no-unused-vars": 0,
         "eqeqeq": [
             "error",
