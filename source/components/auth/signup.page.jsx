@@ -1,6 +1,6 @@
-import React, {Component, PropTypes} from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as authActions from '../../actions/auth.actions';
 import PageContent from '../common/page.content';
 import SignupForm from './signup.form';
@@ -47,7 +47,7 @@ class SignupPage extends Component {
                 toastr.error(error);
 
                 // todo: move this code to api call wrapper in promise 
-                var modelErrors = error.response.data.modelState;
+                let modelErrors = error.response.data.modelState;
 
                 this.setState({
                     errors: {

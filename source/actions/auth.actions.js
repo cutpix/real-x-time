@@ -35,7 +35,6 @@ export function userSignupRequest(userData) {
 }
 
 export function externalSignupRequest(url) {
-    debugger;
     return dispatch => {
         return new Promise((resolve, reject) => {
             resolve();
