@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router';
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 export default class Navigator extends Component {
     render() {
@@ -13,6 +13,9 @@ export default class Navigator extends Component {
                 </li>
                 <li className="header-nav-item">
                     <Link className="header-nav-link" to="/courses" activeClassName="active">Courses</Link>
+                </li>
+                <li className="header-nav-item">
+                    <Link className="header-nav-link" to="/chat" activeClassName="active">Chat</Link>
                 </li>
             </ul>
         );

@@ -1,8 +1,10 @@
 import React, { Component, PropTypes } from 'react';
-import ModelList from './model.list';
+import SiteWrapper from '../common/site.wrapper';
+import Hero from '../common/hero';
+import Divider from '../common/divider';
 import PageContent from '../common/page.content';
 
-const persons = [];
+import pages from 'data/pages';
 
 class HomePage extends Component {
     constructor(props, context) {
@@ -10,10 +12,19 @@ class HomePage extends Component {
     }
 
     render() {
+        const banner = pages.home.content.find(c => c.type === 'banner');
         return (
-            <PageContent role='main'>
-                <ModelList data={persons} />
-            </PageContent>
+            <SiteWrapper>
+                <Hero {...banner} />
+                <Divider />
+                <PageContent role="main">
+                    <div className="title-list">
+                        <h1>Top TV picks for Jack</h1>
+                        <div className="titles-wrapper">
+                        </div>
+                    </div>
+                </PageContent>
+            </SiteWrapper>
         );
     }
 }

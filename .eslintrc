@@ -2,6 +2,10 @@
     "extends": [
         "eslint:recommended"
     ],
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+    },
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
@@ -15,15 +19,10 @@
         "node": true,
         "jquery": true
     },
-    "globals": {
-        "__DEV__": false,
-        "__PROD__": false,
-        "__TEST__": false
-    },
     "rules": {
         "jsx-quotes": [
-            2,
-            "prefer-single"
+            "error",
+            "prefer-double"
         ],
         "semi": [
             "error",
@@ -39,6 +38,7 @@
         "eqeqeq": [
             "error",
             "allow-null"
-        ]
+        ],
+        "comma-dangle": 0
     }
 }

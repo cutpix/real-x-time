@@ -1,3 +1,6 @@
+/*#region Course
+---------------------------------------------------- */
+
 .course-list {
     margin: 15px 0;
 }
@@ -31,7 +34,6 @@
 
 .course-row .details {
     font-size: 12px;
-    color: #767676;
 }
 
 .course-row .category-icon {
@@ -40,4 +42,185 @@
     top: 18px;
     left: 8.5px;
     height: 28px;
+}
+
+
+/*#region Home
+---------------------------------------------------- */
+
+.person-list {
+    margin: 15px 0;
+}
+
+.person-row {
+    padding: 15px 0;
+}
+
+
+/*#region Header Styles
+---------------------------------------------------- */
+
+.person-row header {
+    position: relative;
+    margin: 0 0 10px;
+}
+
+.person-row header .name {
+    font-size: 1.5em;
+}
+
+
+/*#region Details Styles
+---------------------------------------------------- */
+
+.person-row .details {
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.person-row .details .gender, .person-row .details .age {
+    display: inline-block;
+}
+
+.person-row .details div:not(:first-child)::before, .person-row .details::before {
+    content: "•";
+    font-weight: 600;
+    margin: 0 5px;
+    color: #e74c3c;
+}
+
+
+/*#region Job Spec Styles
+---------------------------------------------------- */
+
+.person-row .spec {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.person-row .spec span {
+    text-transform: uppercase;
+}
+
+.person-row .spec span:not(:first-child)::before {
+    content: "|";
+    color: #bdc3c7;
+    padding: 0 5px;
+}
+
+
+/*#region About Styles
+---------------------------------------------------- */
+
+.person-row .about {
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: 400;
+    color: #767676;
+}
+
+.channel-info {
+    background-image: url(/images/common-dark.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.hero {
+    background: #422A8C;
+    position: relative;
+    animation: pulse 5.3s ease infinite;
+}
+
+@keyframes pulse {
+    50% {
+        background: #592B89;
+    }
+}
+
+
+/* TitleList */
+
+.title-list {
+    position: relative;
+    padding: 20px 0px;
+    margin: 0 -10px;
+}
+
+.title-list h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: -0.0625em;
+}
+
+.title-list .titles-wrapper {
+    margin: 20px 0;
+}
+
+
+/* wufoo-ad svg */
+
+.svg-wrap {
+    padding-top: 50%;
+    position: relative;
+}
+
+.wufoo-ad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wufoo-letter, .wufoo-letter:nth-child(2), .wufoo-letter:nth-child(3), .wufoo-letter:nth-child(4), .wufoo-letter:nth-child(5) {
+    animation: kaboom 5s ease alternate infinite;
+}
+
+.wufoo-letter:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.wufoo-letter:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.wufoo-letter:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.wufoo-letter:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+@keyframes kaboom {
+    90% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+#trex {
+    transform: translateY(150px);
+    animation: popup 10s 6.5s ease infinite;
+}
+
+@keyframes popup {
+    0% {
+        transform: translateY(150px);
+    }
+    34% {
+        transform: translateY(20px);
+    }
+    37% {
+        transform: translateY(150px);
+    }
+    100% {
+        transform: translateY(150px);
+    }
 }

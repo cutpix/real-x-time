@@ -20,6 +20,7 @@
     "open": "0.0.5",
     "redux-immutable-state-invariant": "^1.2.3",
     "style-loader": "^0.13.1",
+    "json-loader": "^0.5.4",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.7.0",
     "webpack-hot-middleware": "^2.12.2",
@@ -34,6 +35,7 @@
     "react-router": "^2.6.0",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
+    "socket.io-client": "^1.5.1",
     "toastr": "^2.1.2"
   }
 }

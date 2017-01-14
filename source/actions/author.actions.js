@@ -4,7 +4,10 @@ import { beginAjaxCall } from './ajax.status.actions';
 
 
 export function loadAuthorsSuccess(authors) {
-    return { type: types.LOAD_AUTHORS_SUCCESS, authors };
+    return {
+        type: types.LOAD_AUTHORS_SUCCESS,
+        authors
+    };
 }
 
 // thunks

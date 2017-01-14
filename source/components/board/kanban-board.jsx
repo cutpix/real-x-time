@@ -32,7 +32,7 @@ const cardsList = [
 export default class KanbanBoard extends Component {
     render() {
         return (
-            <div className='board'>
+            <div className="board">
                 <List id="todo" title="To Do"
                     cards={cardsList.filter(cart => cart.status === 'todo') } />
                 <List id="in-progress" title="In Progress"

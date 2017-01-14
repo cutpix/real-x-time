@@ -5,7 +5,7 @@ process.env.NODE_ENV = 'development';
 
 export default {
     debug: true,
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'eval-source-map',
     noInfo: false,
     entry: [
         'webpack-hot-middleware/client?reload=true',
@@ -20,7 +20,7 @@ export default {
         root: path.resolve(__dirname, 'source'),
         alias: {},
         modulesDirectories: ['node_modules', 'bower_components', 'dist'],
-        extensions: ['', '.js', '.jsx']
+        extensions: ['', '.js', '.jsx', '.json']
     },
     target: 'web',
     devServer: {
@@ -39,6 +39,13 @@ export default {
         })
     ],
     module: {
+        preLoaders: [
+            {
+                test: /\.json$/,
+                exclude: /node_modules/,
+                loader: 'json'
+            }
+        ],
         loaders: [
             {
                 test: /\.js(x?)$/,

@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 import TextInput from '../common/text.input';
 import SelectInput from '../common/select.input';
 
@@ -6,7 +6,7 @@ const CourseForm = ({course, allAuthors, onSave, onChange, saving, errors}) => {
 
     return (
         <form>
-            <h1>Manage Course</h1>
+            <h1 className="title">Manage Course</h1>
             <TextInput
                 name="title"
                 label="Title"

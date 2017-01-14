@@ -3,12 +3,10 @@ import { connect } from 'react-redux';
 import Header from './common/header';
 
 const Layout = (props) => {
-    return (
-        <div className='page'>
-            <Header loading={props.loading} />
-            {props.children}
-        </div>
-    );
+    return <div className="page">
+        <Header loading={props.loading} />
+        {props.children}
+    </div>;
 };
 
 Layout.propTypes = {

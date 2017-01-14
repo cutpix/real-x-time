@@ -34,27 +34,12 @@ class SocialLogin extends Component {
 
                 extWindow.close();
             }
-
-            // if (extWindow.closed) {
-            //     window.clearInterval(interval);
-            //     const url = extWindow.document.URL;
-            //     let queryString = url.substring(url.indexOf('#') + 1);
-
-            //     const login = {};
-            //     queryString.replace(
-            //         new RegExp('([^?=&]+)(=([^&]*))?', 'g'),
-            //         function ($0, $1, $2, $3) { login[$1] = $3; }
-            //     );
-
-            //     this.props.callback(login);
-            // }
-
         }, 1000);
     }
 
     render() {
         return (
-            <button className='btn-block' onClick={this.handleExternalAuth}>
+            <button className="btn-block" onClick={this.handleExternalAuth}>
                 Connect with {this.props.provider.name}
             </button>
         );

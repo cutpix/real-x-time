@@ -4,7 +4,7 @@ import SocialLogin from './social.login';
 
 const ExternalLoginList = ({providers, callback}) => {
     return (
-        <div className='external-login-list'>
+        <div className="external-login-list">
             {
                 providers.map(provider =>
                     <SocialLogin

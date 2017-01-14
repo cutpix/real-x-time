@@ -1,3 +1,6 @@
+/*#region Default HTML Elements
+---------------------------------------------------- */
+
 * {
     box-sizing: border-box;
 }
@@ -21,12 +24,27 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body {
     background-color: #fff;
     font-family: 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+    color: #333;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+a:link.active {
+    text-decoration: underline;
 }
 
 h1 {
-    font-weight: 200;
-    color: #3b414c;
-    font-size: 20px;
+    font-size: 2em;
+    padding-bottom: 0.3em;
 }
 
 ul {
@@ -46,19 +64,13 @@ li {
     text-align: -webkit-match-parent;
 }
 
-.header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #e5e5e5;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+svg:not(:root) {
+    overflow: hidden;
 }
 
-.container {
-    width: 1000px;
-    margin: 0 auto;
-    max-width: 90%;
-}
+
+/*#region Common Layout Styles
+---------------------------------------------------- */
 
 .clearfix::before, .clearfix::after, .columns::before, .columns::after {
     display: table;
@@ -69,15 +81,26 @@ li {
     clear: both;
 }
 
-a:link, a:visited {
-    text-decoration: none;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    max-width: 90%;
 }
 
-a:link.active {
-    text-decoration: underline;
+.left, .float-left {
+    float: left !important;
+}
+
+
+/*#region Header Styles
+---------------------------------------------------- */
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.08) inset;
 }
 
 .header .logo {
@@ -99,9 +122,9 @@ a:link.active {
     font-size: 28px;
 }
 
-svg:not(:root) {
-    overflow: hidden;
-}
+
+/*#region Navigator Styles
+---------------------------------------------------- */
 
 .header-nav {
     list-style: none;
@@ -125,9 +148,111 @@ svg:not(:root) {
     text-decoration: none;
 }
 
-.left, .float-left {
-    float: left !important;
+
+/*#region Hero Styles
+---------------------------------------------------- */
+
+.divider {
+    width: 100%;
+    height: 4px;
+    position: relative;
 }
+
+.divider .start {
+    background-color: #50cfe0;
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.divider .mid {
+    background-image: url(/images/gradient.png);
+    background-size: 1179px 4px;
+    max-width: 1179px;
+    width: 100%;
+    height: 4px;
+    display: inline-block;
+    top: 0;
+    z-index: 1000;
+    position: absolute;
+}
+
+.divider .end {
+    background-color: #fc4182;
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.hero .container {
+    padding: 15px 0;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hero .info {
+    clear: none;
+    width: 45%;
+    margin: 35px 3% 35px 0;
+}
+
+.hero .info::after, .hero .info::before, .hero .presentation::after, .hero .presentation::before {
+    content: '';
+    display: table;
+}
+
+.hero .info, .hero .presentation {
+    float: left;
+    text-align: inherit;
+}
+
+.hero h1, .hero h2 {
+    padding: 10px 0;
+}
+
+.cd-intro {
+    width: 90%;
+    max-width: 400px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    color: #FFF;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.hero h2 {
+    opacity: .55;
+    font-size: 20px;
+    color: #FFF;
+    line-height: 28px;
+    padding-right: 115px;
+    font-weight: 300;
+}
+
+.hero .presentation:last-child {
+    margin-right: 0;
+}
+
+.hero .presentation {
+    clear: none;
+    width: 52%;
+    border-radius: 4px;
+    position: relative;
+    min-height: 250px;
+}
+
+
+/*#region PageContent Styles
+---------------------------------------------------- */
 
 .page-content {
     padding-top: 20px;
@@ -137,28 +262,46 @@ svg:not(:root) {
     padding: 0 10px;
 }
 
+.page-content h1 {
+    margin: 24px 0 10px 0;
+    line-height: 1.25;
+    border-bottom: 1px solid #eee;
+}
+
 .title {
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .description {
-    margin-bottom: 12px;
+    font-size: 1em;
+    margin: 0 0 2.5em;
     overflow: hidden;
-    font-size: 14px;
     color: #767676;
 }
 
-.columns {
-    margin-right: -10px;
-    margin-left: -10px;
-}
-
-.column {
-    float: left;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-.one-fourth {
-    width: 25%;
+@media (max-width: 767px) {
+    .cd-intro {
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .hero .info {
+        display: block;
+        clear: both;
+        float: none;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero h2 {
+        font-size: 18px;
+        padding: 10px;
+        text-align: center;
+    }
+    .hero .presentation {
+        display: none;
+    }
 }

@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import CourseListRow from './course.list.row';
 
 const CourseList = ({courses}) => {
