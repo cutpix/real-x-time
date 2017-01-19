@@ -1,10 +1,10 @@
-import React, {PropTypes} from 'react';
-import {IndexLink} from 'react-router';
+import React, { PropTypes } from 'react';
+import { Link, IndexLink } from 'react-router';
 import Navigator from './navigator';
 import LoadingDots from './loading.dots';
 
 
-const Header = ({loading}) => {
+const Header = ({loading, isAuthenticated}) => {
     return (
         <div className="header" role="banner">
             <div className="container clearfix">
@@ -15,6 +15,17 @@ const Header = ({loading}) => {
                 </IndexLink>
                 <Navigator />
                 {loading && <LoadingDots interval={100} dots={20} />}
+                {!isAuthenticated &&
+                    <ul className="header-nav user-nav right">
+                        <li className="header-nav-item">
+                            <Link className="header-nav-link" to="/signup" activeClassName="active">Sign Up</Link>
+                        </li>
+                        <li className="header-nav-item">.</li>
+                        <li className="header-nav-item">
+                            <Link className="header-nav-link" to="/signin" activeClassName="active">Sign In</Link>
+                        </li>
+                    </ul>
+                }
             </div>
         </div>
     );
@@ -22,7 +33,8 @@ const Header = ({loading}) => {
 
 // validation rules
 Header.propTypes = {
-    loading: PropTypes.bool.isRequired
+    loading: PropTypes.bool.isRequired,
+    isAuthenticated: PropTypes.bool.isRequired
 };
 
 export default Header;

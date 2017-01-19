@@ -10,7 +10,7 @@ import logger from '../middleware/logger.middleware';
 export default function configureStore(initialState) {
 
     // Middleware Configuration
-    const middleware = [thunk, webSocket(), logger, reduxImmutableStateInvariant()];
+    const middleware = [thunk, webSocket(), /*logger,*/ reduxImmutableStateInvariant()];
 
     // Store Enhancers
     const enhancers = [];

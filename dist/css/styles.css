@@ -91,6 +91,10 @@ svg:not(:root) {
     float: left !important;
 }
 
+.right, .float-right {
+    float: right !important;
+}
+
 
 /*#region Header Styles
 ---------------------------------------------------- */

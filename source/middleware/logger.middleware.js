@@ -19,7 +19,7 @@
 export default function loggerMiddleware({getState}) {
     return next => action => {
         console.log('will dispatch', action);
-        
+
         // Call the next dispatch method in the middleware chain.
         let result = next(action);
 

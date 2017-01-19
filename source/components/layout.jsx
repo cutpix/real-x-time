@@ -4,20 +4,22 @@ import Header from './common/header';
 
 const Layout = (props) => {
     return <div className="page">
-        <Header loading={props.loading} />
+        <Header loading={props.loading} isAuthenticated={props.isAuthenticated} />
         {props.children}
     </div>;
 };
 
 Layout.propTypes = {
     children: PropTypes.object.isRequired,
-    loading: PropTypes.bool.isRequired
+    loading: PropTypes.bool.isRequired,
+    isAuthenticated: PropTypes.bool.isRequired
 };
 
 
 function mapStateToProps(state, ownProps) {
     return {
-        loading: state.ajaxCallsInProgress > 0
+        loading: state.ajaxCallsInProgress > 0,
+        isAuthenticated: state.auth.isAuthenticated
     };
 }
 

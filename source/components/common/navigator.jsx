@@ -3,9 +3,6 @@ import { Link } from 'react-router';
 
 export default class Navigator extends Component {
     render() {
-        const links = [
-            '/profile', '/courses'
-        ];
         return (
             <ul className="header-nav left" role="navigation">
                 <li className="header-nav-item">
