@@ -142,6 +142,79 @@
 }
 
 
+/* Error Pages */
+
+.error-pages {
+    overflow: auto;
+    height: calc(100vh - 85px);
+}
+
+.error-pages .ep-container {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    margin: 100px auto;
+    background: #263238;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border-top: 24px solid #FFF;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+}
+
+.error-pages .ep-container .close-editor {
+    font-size: 14px;
+    color: #FFF;
+    background: red;
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 8px;
+    width: 16px;
+    text-align: center;
+    border-radius: 100%;
+    line-height: 1;
+    padding: 1px;
+}
+
+.content-area.error-pages .ep-container .close-editor i {
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    -webkit-opacity: 0;
+    opacity: 0;
+    -ms-filter: progid: DXImageTransform.Microsoft.Alpha(opacity=0);
+    filter: alpha(opacity=0);
+}
+
+.mdi-close:before {
+    content: " ";
+}
+
+.mdi {
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+
 /* TitleList */
 
 .title-list {
