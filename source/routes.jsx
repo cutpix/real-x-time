@@ -8,6 +8,7 @@ import ProfilePage from './components/profile/profile.page';
 import CoursesPage from './components/course/courses.page';
 import ManageCoursePage from './components/course/manage.course.page';
 import SignupPage from './components/auth/signup.page';
+import NotFound from './components/common/not.found';
 
 export default (
     <Route path="/" component={Layout}>
@@ -18,5 +19,7 @@ export default (
         <Route path="/course/:id" component={ManageCoursePage} />
         <Route path="/signup" component={SignupPage} />
         <Route path="/chat" component={ChatPage} />
+
+        <Route path="*" component={NotFound} />
     </Route>
 );
