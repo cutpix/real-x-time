@@ -324,3 +324,14 @@
         transform: translateY(150px);
     }
 }
+
+@media screen and (max-width: 660px) {
+    .content-area.error-pages .ep-container {
+        width: 320px;
+        height: 140px;
+        margin: 20px auto;
+    }
+    .content-area.error-pages .ep-container pre {
+        font-size: 11px;
+    }
+}
