@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
-import routes from './routes';
+import { getRoutes } from './routes';
 import configureStore from './store/configure.store';
 import initialState from './reducers/initial.state';
 import { loadCourses } from './actions/course.actions';
@@ -20,7 +20,7 @@ store.dispatch(loadLoginProviders());
 
 render(
   <Provider store={store}>
-    <Router history={browserHistory} routes={routes} />
+    <Router history={browserHistory} routes={getRoutes(store)} />
   </Provider>,
   document.getElementById('root')
 );
