@@ -14,12 +14,11 @@ import NotFoundPage from './components/error/not.found.page';
 
 
 export const getRoutes = (store) => {
-    const requireAuth = (nextState, replaceState, callback) => {
+    const requireAuth = (nextState, replace, callback) => {
         const state = store.getState();
 
         if (!state.auth.isAuthenticated) {
-            // replaceState({ nextPathname: nextState.location.pathname }, '/signin');
-            replaceState({ pathname: '/signin', state: { nextPathname: nextState.location.pathname } });
+            replace({ pathname: '/signin', query: { redirect_uri: nextState.location.pathname } });
         }
         callback();
     };
