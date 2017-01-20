@@ -13,6 +13,7 @@ import SignupPage from './components/auth/signup.page';
 
 import NotFoundPage from './components/error/not.found.page';
 
+//TODO: Implement authentication checking
 const requireAuth = (nextState, replaceState, callback) => {
 
     const state = {
