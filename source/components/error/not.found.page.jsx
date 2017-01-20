@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import PageContent from '../common/page.content';
-import PreformattedMessage from './preformatted.message';
+
 import MainLayout from '../../layouts/main.layout';
+import PreformattedMessage from './preformatted.message';
 
 const NotFoundPage = () => {
     return (
@@ -12,7 +12,7 @@ const NotFoundPage = () => {
                     <Link className="close-editor" to="/">
                         <i className="mdi mdi-close" />
                     </Link>
-                    <PreformattedMessage code={404} />
+                    <PreformattedMessage statusCode={404} />
                 </div>
             </div>
         </MainLayout>

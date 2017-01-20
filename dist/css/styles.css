@@ -74,6 +74,11 @@ pre {
     display: block;
 }
 
+pre[data-lang]::before {
+    content: attr(data-lang);
+    display: block;
+}
+
 
 /*#region Common Layout Styles
 ---------------------------------------------------- */

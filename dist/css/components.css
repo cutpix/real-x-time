@@ -228,6 +228,11 @@
     -ms-flex-item-align: center;
 }
 
+.content-area.error-pages .ep-container pre p {
+    display: inline-block;
+    margin: 0;
+}
+
 .content-area.error-pages .ep-container pre span.red {
     color: red;
 }

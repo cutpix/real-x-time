@@ -1,14 +1,22 @@
+/*
+* https://github.com/chjj/marked 
+* A full-featured markdown parser and compiler, written in JavaScript. 
+*/
+
 import React from 'react';
+import marked from 'marked';
 
-const errors = {
-    401: `if(statusCode === 401){
-    console.log("Unauthorized request.")
-}`, 404: `if(statusCode === 404){
-    console.log("Page not found.")
-}`};
 
-const PreformattedMessage = ({code}) => {
-    return <pre>{errors[code]}</pre>;
+const messages = {
+    401: 'if(statusCode === <span class="blue">401</span>){\n&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="red">"Unauthorized."</span>)\n}',
+    404: 'if(statusCode === <span class="blue">404</span>){\n&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="red">"Page not found."</span>)\n}'
+};
+
+
+const PreformattedMessage = ({statusCode}) => {
+    return (
+        <pre dangerouslySetInnerHTML={{ __html: marked(messages[statusCode]) }} />
+    );
 };
 
 export default PreformattedMessage;

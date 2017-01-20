@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
+import { requireAuth } from './utilities/require.auth';
 
 import MainLayout from './layouts/main.layout';
 import ReadmeLayout from './layouts/readme.layout';
@@ -10,24 +11,8 @@ import ProfilePage from './components/profile/profile.page';
 import CoursesPage from './components/course/courses.page';
 import ManageCoursePage from './components/course/manage.course.page';
 import SignupPage from './components/auth/signup.page';
-
 import NotFoundPage from './components/error/not.found.page';
 
-//TODO: Implement authentication checking
-const requireAuth = (nextState, replaceState, callback) => {
-
-    const state = {
-        user: null
-    };
-
-    if (state.user === null) {
-        replaceState({
-            pathname: '/signin',
-            state: { nextPathname: nextState.location.pathname }
-        });
-    }
-    callback();
-};
 
 export default (
     <Route path="/">
@@ -42,7 +27,7 @@ export default (
         </Route>
 
         <Route path="/readme" component={ReadmeLayout}>
-            
+
         </Route>
 
         <Route path="*" components={NotFoundPage} />
