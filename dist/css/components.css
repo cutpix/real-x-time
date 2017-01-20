@@ -144,12 +144,17 @@
 
 /* Error Pages */
 
-.error-pages {
-    overflow: auto;
-    height: calc(100vh - 85px);
+.content-area {
+    position: relative;
+    background: #ECEFF1;
 }
 
-.error-pages .ep-container {
+.content-area.error-pages {
+    overflow: auto;
+    height: calc(100vh - 50px);
+}
+
+.content-area.error-pages .ep-container {
     position: relative;
     width: 500px;
     height: 350px;
@@ -172,7 +177,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
 }
 
-.error-pages .ep-container .close-editor {
+.content-area.error-pages .ep-container .close-editor {
     font-size: 14px;
     color: #FFF;
     background: red;
@@ -201,17 +206,34 @@
 }
 
 .mdi-close:before {
-    content: " ";
+    content: "\f22b";
 }
 
 .mdi {
     display: inline-block;
-    font: normal normal normal 24px/1 "Material Design Icons";
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transform: translate(0, 0);
+}
+
+.content-area.error-pages .ep-container pre {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 2;
+    color: #FFF;
+    align-self: center;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+}
+
+.content-area.error-pages .ep-container pre span.red {
+    color: red;
+}
+
+.content-area.error-pages .ep-container pre span.blue {
+    color: #42A5F5;
 }
 
 
