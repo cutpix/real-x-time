@@ -1,0 +1,13 @@
+{
+    "title": "A list of books JSON data file",
+    "file.name": "books.json",
+    "entity.type": "Book",
+    "books": [
+        {
+            "name": "",
+            "url": "",
+            "category": "",
+            "pages": 0
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+_______________________________________________________________________________
+
+CONGRATULATIONS!
+
+You found our humans.txt file humans.txt file explains 
+the team, technology, and graphic assets behind this site.
+
+_______________________________________________________________________________
+
+AYOWARE TEAM
+This website was hand-crafted by AW.
+
+Andrei Pavlyuk
+Design & web development
+www.ayoware.com/team/andrei-pavlyuk
+
+Alex Savchyk
+Web development
+www.ayoware.com/team/alex-savchyk
+
+Nataliya Pavlyuk
+Content, copywriting & user research
+www.ayoware.com/team/nata-pavlyuk
+
+_______________________________________________________________________________
+
+SPECIAL THANKS
+
+Vasiliy Pavlyuk
+Larisa Pavlyuk
+Nataliya Vokhmekova
+Dmitriy Vokhmekova
+Nataliya Pavlyuk
+
+_______________________________________________________________________________
+
+TECHNOLOGY
+
+React - A JavaScript library for building user interfaces
+facebook.github.io/react
+
+Redux - A predictable state container for JavaScript apps.
+redux.js.org
+
+Github - Code collaboration
+github.com
+
+JS libraries include:
+Axios, Modernizr, respond.js, velocity-animate, slick-carousel
+
+_______________________________________________________________________________
+
+FONTS
+
+FF Mark
+ffmark.com
+
+────────────────────────────────────────────────────────────────────────────────
+
+Contacts:
+
+  yourfriends@medium.com   — Help and general support
+  press@medium.com         — Press information
+  copyright@medium.com     — Reports of copyright infringement
+  security@medium.com      — Responsible disclosures

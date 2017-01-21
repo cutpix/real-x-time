@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "name": "bookmarks.json",
+    "description": "An application bookmarks JSON data file",
+    "docs.schema": "https://schema.org/BookmarkAction",
+    "bookmarks": [
+        {
+            "title": "Textbook Equity LLC",
+            "description": "Fearlessly Copy, Print, Remix ™ \"Barriers to education, whether intentional or not, by policy or price, decays humanity.\"",
+            "url": "https://www.textbookequity.org/",
+            "categories": [
+                "Books",
+                "Education"
+            ]
+        },
+        {
+            "title": "JSON: What It Is, How It Works, & How to Use It",
+            "description": "An introduction to JSON (JavaScript Object Notation) and how it's used, including an in-depth JSON tutorial and an example JSON-powered jQuery plugin.",
+            "url": "https://www.copterlabs.com/json-what-it-is-how-it-works-how-to-use-it/",
+            "categories": [
+                "JSON",
+                "Copter Labs"
+            ]
+        }
+    ]
+}

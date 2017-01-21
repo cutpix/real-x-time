@@ -10,6 +10,7 @@ import ProfilePage from './components/profile/profile.page';
 import CoursesPage from './components/course/courses.page';
 import ManageCoursePage from './components/course/manage.course.page';
 import SignupPage from './components/auth/signup.page';
+import ReadmePage from './components/readme/readme.page';
 import NotFoundPage from './components/error/not.found.page';
 
 
@@ -35,8 +36,8 @@ export const getRoutes = (store) => {
                 <Route path="/chat" component={ChatPage} />
             </Route>
 
-            <Route path="/readme" component={ReadmeLayout}>
-
+            <Route component={ReadmeLayout}>
+                <Route path="/readme" component={ReadmePage} />
             </Route>
 
             <Route path="*" components={NotFoundPage} />
