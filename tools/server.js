@@ -4,7 +4,7 @@ import path from 'path';
 import open from 'open';
 
 import config from '../webpack.config.dev';
-import {createLogger} from './logger';
+import { createLogger } from './logger';
 
 const scheme = config.devServer.scheme;
 const hostname = config.devServer.hostname;
