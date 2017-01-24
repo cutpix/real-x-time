@@ -1,18 +1,16 @@
 {
     "home": {
-        "title": "Build Your First React.js Application",
-        "description": "Let's start from scratch and build a full React application!",
         "content": [
             {
                 "type": "banner",
                 "heading": "The Architect as Developer",
                 "description": "Thoughts and ideas about architecture and programming."
             }
-        ]
+        ],
+        "description": "Let's start from scratch and build a full React application!",
+        "title": "Build Your First React.js Application"
     },
     "profile": {
-        "title": "Profile",
-        "description": "I'm a person who thinks deeply according to the facts or exact meaning of something ...",
         "content": [
             {
                 "type": "markdown",
@@ -21,6 +19,8 @@
                 "className": "",
                 "content": "Some Content Here"
             }
-        ]
+        ],
+        "description": "I'm a person who thinks deeply according to the facts or exact meaning of something ...",
+        "title": "Profile"
     }
 }

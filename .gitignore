@@ -4,6 +4,9 @@ Icon
 # Thumbnails
 ._*
 
+# IDE
+.vscode
+
 # Typings
 typings*
 jsconfig.*
