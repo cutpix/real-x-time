@@ -1,25 +1,21 @@
 {
     "home": {
-        "content": [
-            {
-                "type": "banner",
-                "heading": "The Architect as Developer",
-                "description": "Thoughts and ideas about architecture and programming."
-            }
-        ],
+        "content": [{
+            "type": "banner",
+            "heading": "The Architect as Developer",
+            "description": "Thoughts and ideas about architecture and programming."
+        }],
         "description": "Let's start from scratch and build a full React application!",
         "title": "Build Your First React.js Application"
     },
     "profile": {
-        "content": [
-            {
-                "type": "markdown",
-                "key": "header",
-                "id": "header",
-                "className": "",
-                "content": "Some Content Here"
-            }
-        ],
+        "content": [{
+            "type": "markdown",
+            "key": "header",
+            "id": "header",
+            "className": "",
+            "content": "Some Content Here"
+        }],
         "description": "I'm a person who thinks deeply according to the facts or exact meaning of something ...",
         "title": "Profile"
     }
