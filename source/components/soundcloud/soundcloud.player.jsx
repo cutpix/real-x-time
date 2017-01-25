@@ -2,14 +2,16 @@ import React, { Component, PropTypes } from 'react';
 
 
 export default class SoundCloudPlayer extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
     }
 
     render() {
         return (
             <div className="soundcloud-player">
-                SoundCloud Player
+                <h2 className="profile">
+                    {this.props.title}
+                </h2>
                 {this.props.children}
             </div>
         );
@@ -17,5 +19,6 @@ export default class SoundCloudPlayer extends Component {
 }
 
 SoundCloudPlayer.propTypes = {
-    children: PropTypes.array.isRequired
+    title: PropTypes.string.isRequired,
+    children: PropTypes.object.isRequired
 };
