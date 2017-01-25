@@ -1,0 +1,17 @@
+{
+    // Enforcing
+    "curly": true,
+
+    // Relaxing
+
+
+    // Environments
+    "node": true,
+    "jquery": false,
+
+    // Legacy
+    
+
+    // Custom Globals
+    "predef": []
+}
