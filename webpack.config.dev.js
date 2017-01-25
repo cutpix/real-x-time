@@ -39,15 +39,12 @@ export default {
         })
     ],
     module: {
-        preLoaders: [
-            {
-                test: /\.json$/,
-                exclude: /node_modules/,
-                loader: 'json'
-            }
-        ],
-        loaders: [
-            {
+        preLoaders: [{
+            test: /\.json$/,
+            exclude: /node_modules/,
+            loader: 'json'
+        }],
+        loaders: [{
                 test: /\.js(x?)$/,
                 exclude: /node_modules/,
                 loader: 'babel',

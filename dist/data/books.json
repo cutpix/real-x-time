@@ -1,29 +1,25 @@
 {
     "@context": "http://schema.org/",
-    "@graph": [
-        {
-            "@type": "Book",
-            "label": "Linked Data Patterns",
-            "link": "http://patterns.dataincubator.org/book/"
-        },
-        {
-            "@type": "Book",
-            "label": "Linked Data: Structured data on the Web",
-            "authors": [
-                "David Wood",
-                "Marsha Zaidman",
-                "Luke Ruth",
-                "Michael Hausenblas"
-            ],
-            "link": "https://www.manning.com/books/linked-data/"
-        },
-        {
-            "@type": "Book",
-            "label": "Linking Enterprise Data",
-            "authors": [
-                "David Wood"
-            ],
-            "link": "http://linkeddatadeveloper.com/Projects/Linking-Enterprise-Data/index.xhtml?view"
-        }
-    ]
+    "@graph": [{
+        "@type": "Book",
+        "label": "Linked Data Patterns",
+        "link": "http://patterns.dataincubator.org/book/"
+    }, {
+        "@type": "Book",
+        "label": "Linked Data: Structured data on the Web",
+        "authors": [
+            "David Wood",
+            "Marsha Zaidman",
+            "Luke Ruth",
+            "Michael Hausenblas"
+        ],
+        "link": "https://www.manning.com/books/linked-data/"
+    }, {
+        "@type": "Book",
+        "label": "Linking Enterprise Data",
+        "authors": [
+            "David Wood"
+        ],
+        "link": "http://linkeddatadeveloper.com/Projects/Linking-Enterprise-Data/index.xhtml?view"
+    }]
 }

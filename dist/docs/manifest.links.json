@@ -1,6 +1,7 @@
 {
     "description": "",
     "links": [
+        "https://developer.chrome.com/extensions/manifest",
         "https://w3c.github.io/manifest/",
         "http://html5doctor.com/web-manifest-specification/"
     ]

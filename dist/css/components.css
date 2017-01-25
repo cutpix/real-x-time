@@ -80,11 +80,13 @@
     display: inline-block;
 }
 
-.person-row .details .gender, .person-row .details .age {
+.person-row .details .gender,
+.person-row .details .age {
     display: inline-block;
 }
 
-.person-row .details div:not(:first-child)::before, .person-row .details::before {
+.person-row .details div:not(:first-child)::before,
+.person-row .details::before {
     content: "•";
     font-weight: 600;
     margin: 0 5px;
@@ -276,7 +278,11 @@
     height: 100%;
 }
 
-.wufoo-letter, .wufoo-letter:nth-child(2), .wufoo-letter:nth-child(3), .wufoo-letter:nth-child(4), .wufoo-letter:nth-child(5) {
+.wufoo-letter,
+.wufoo-letter:nth-child(2),
+.wufoo-letter:nth-child(3),
+.wufoo-letter:nth-child(4),
+.wufoo-letter:nth-child(5) {
     animation: kaboom 5s ease alternate infinite;
 }
 

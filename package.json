@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json.schemastore.org/package",
   "name": "real-x-time",
   "version": "1.0.0",
   "main": "tools/server.js",
@@ -37,7 +36,6 @@
     "react-router": "^2.6.0",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
-    "socket.io-client": "^1.5.1",
     "toastr": "^2.1.2"
   }
 }
