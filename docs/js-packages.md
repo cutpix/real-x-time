@@ -1,6 +1,8 @@
-# [ #***js***._coach_ **🐫**🐪 ]
+# **🐫**📦 #***js***._coach_
 
-> ####  **🐫** This is a [catalog](https://js.coach/) of open 🇸ource JS packages. **🐪**
+ 
+
+This is a [catalog](https://js.coach/>) of open 🇸ource JS 📦's.
 
 ```
 Libraries come and go. The ecosystem evolves rapidly, and that's a good thing. But it means 
@@ -9,11 +11,10 @@ on popular results — established solutions that may not be the best fit for yo
 ```
 
 ```
-This website indexes new packages and is updated roughly once per day, 
-by using both automated scripts and manual curation. It is a complete rewrite 
-and grown-up version of React.parts, a tiny project that started a year ago. 
-Even if you are implementing your own solution for your particular problem, 
-this can be a good place to find interesting code to learn from.
+This website indexes new packages and is updated roughly once per day, by using both automated
+scripts and manual curation. It is a complete rewrite and grown-up version of React.parts, 
+a tiny project that started a year ago. Even if you are implementing your own solution for your 
+particular problem, this can be a good place to find interesting code to learn from.
 ```
 
 ```
