@@ -1,7 +1,6 @@
 import delay from './delay';
 
-const authors = [
-    {
+const authors = [{
         id: 'andrew-pavlyuk',
         firstName: 'Andrew',
         lastName: 'Pavlyuk'

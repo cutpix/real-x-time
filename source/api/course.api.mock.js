@@ -1,7 +1,6 @@
 import delay from './delay';
 
-const courses = [
-    {
+const courses = [{
         id: 'building-applications-with-react-redux-in-es6',
         title: 'Building Applications with React and Redux in ES6',
         ext_url: 'https://www.pluralsight.com/courses/react-redux-react-router-es6',
