@@ -1,8 +1,6 @@
-# **🐫**📦 #***js***._coach_
+# **🐫** #***js***._coach_
 
- 
-
-This is a [catalog](https://js.coach/>) of open 🇸ource JS 📦's.
+[This is a catalog](https://js.coach/>) of open 🇸ource JS 📦's.
 
 ```
 Libraries come and go. The ecosystem evolves rapidly, and that's a good thing. But it means 
