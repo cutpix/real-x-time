@@ -1,13 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import Header from '../components/common/header';
-
-
 const ReadmeLayout = (props) => {
   return (
     <div className="readme-page">
-      <Header />
       {props.children}
     </div>
   );
@@ -19,7 +15,7 @@ ReadmeLayout.propTypes = {
   loading: PropTypes.bool.isRequired
 };
 
-// redux setup functions for smart container component
+// redux setup function for state mapping
 const mapStateToProps = (state, ownProps) => {
   return {
     loading: state.ajaxCallsInProgress > 0
