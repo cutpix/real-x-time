@@ -15,32 +15,32 @@ import NotFoundPage from './components/error/not.found.page';
 
 
 export const getRoutes = (store) => {
-    const requireAuth = (nextState, replace, callback) => {
-        const state = store.getState();
+  const requireAuth = (nextState, replace, callback) => {
+    const state = store.getState();
 
-        if (!state.auth.isAuthenticated) {
-            replace({ pathname: '/signin', query: { redirect_uri: nextState.location.pathname } });
-        }
-        callback();
-    };
+    if (!state.auth.isAuthenticated) {
+      replace({ pathname: '/signin', query: { redirect_uri: nextState.location.pathname } });
+    }
+    callback();
+  };
 
-    return (
-        <Route path="/">
-            <Route component={MainLayout}>
-                <IndexRoute component={HomePage} />
-                <Route path="/profile" component={ProfilePage} onEnter={requireAuth} />
-                <Route path="/signup" component={SignupPage} />
-                <Route path="/courses" component={CoursesPage} />
-                <Route path="/course" component={ManageCoursePage} />
-                <Route path="/course/:id" component={ManageCoursePage} />
-                <Route path="/chat" component={ChatPage} />
-            </Route>
+  return (
+    <Route path="/">
+      <Route component={MainLayout}>
+        <IndexRoute component={HomePage} />
+        <Route path="/profile" component={ProfilePage} onEnter={requireAuth} />
+        <Route path="/signup" component={SignupPage} />
+        <Route path="/courses" component={CoursesPage} />
+        <Route path="/course" component={ManageCoursePage} />
+        <Route path="/course/:id" component={ManageCoursePage} />
+        <Route path="/chat" component={ChatPage} />
+      </Route>
 
-            <Route component={ReadmeLayout}>
-                <Route path="/readme" component={ReadmePage} />
-            </Route>
+      <Route component={ReadmeLayout}>
+        <Route path="/readme" component={ReadmePage} />
+      </Route>
 
-            <Route path="*" components={NotFoundPage} />
-        </Route>
-    );
+      <Route path="*" components={NotFoundPage} />
+    </Route>
+  );
 };
