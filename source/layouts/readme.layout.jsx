@@ -1,9 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
+
 
 const ReadmeLayout = (props) => {
   return (
-    <div className="readme-page">
+    <div className="page readme">
       {props.children}
     </div>
   );
