@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import SiteWrapper from '../common/site.wrapper';
 import PageContent from '../common/page.content';
@@ -8,7 +9,8 @@ import PreformattedMessage from './../common/preformatted.message';
 
 // import tracks from 'data/soundcloud.tracks';
 
-const ReadmePage = () => {
+
+const ReadmePage = (props) => {
   return (
     <SiteWrapper>
       <PageContent role="readme">
@@ -21,5 +23,11 @@ const ReadmePage = () => {
   );
 };
 
+// redux setup function
+const mapStateToProps = (state, ownProps) => {
+  return {
+    //TODO: fetch data from remote soundcloud mock api
+  };
+};
 
-export default ReadmePage;
+export default connect(mapStateToProps)(ReadmePage);
