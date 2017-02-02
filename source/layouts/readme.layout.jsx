@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-
+import Header from '../components/common/header';
 
 const ReadmeLayout = (props) => {
   return (
     <div className="page readme">
+      <Header loading={props.loading} isAuthenticated={props.isAuthenticated} />
       {props.children}
     </div>
   );
@@ -19,7 +20,8 @@ ReadmeLayout.propTypes = {
 // redux setup function for state mapping
 const mapStateToProps = (state, ownProps) => {
   return {
-    loading: state.ajaxCallsInProgress > 0
+    loading: state.ajaxCallsInProgress > 0,
+    isAuthenticated: state.auth.isAuthenticated
   };
 };
 
