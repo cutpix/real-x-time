@@ -7,16 +7,13 @@ import SoundCloudPlayer from '../soundcloud/soundcloud.player';
 import Stream from '../soundcloud/stream';
 import PreformattedMessage from './../common/preformatted.message';
 
-// import tracks from 'data/soundcloud.tracks';
-
-
 const ReadmePage = (props) => {
   return (
     <SiteWrapper>
       <PageContent role="readme">
         <img src="./images/biometric-b.svg" />
         <SoundCloudPlayer title="We Eat Brains!">
-          <Stream />
+          <Stream tracks={props.tracks} />
         </SoundCloudPlayer>
       </PageContent>
     </SiteWrapper>
@@ -27,6 +24,7 @@ const ReadmePage = (props) => {
 const mapStateToProps = (state, ownProps) => {
   return {
     //TODO: fetch data from remote soundcloud mock api
+    tracks: []
   };
 };
 

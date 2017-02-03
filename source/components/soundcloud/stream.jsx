@@ -8,11 +8,7 @@ const Stream = ({tracks = []}) => {
     <div style={styles} className="stream">
       {
         tracks.map((track, key) => {
-          return (
-            <div className="track" key={key}>
-              {track.title}
-            </div>
-          );
+          return <div className="track" key={key}>{track.title}</div>;
         })
       }
     </div>

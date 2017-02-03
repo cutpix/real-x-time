@@ -59,7 +59,7 @@ class SignupPage extends Component {
     }
 
     handleSocialSignup(login) {
-        this.context.router.push('/signup-' + login.provider.toLowerCase());
+        this.context.router.push('/signup/' + login.provider.toLowerCase());
     }
 
     redirect() {

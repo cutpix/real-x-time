@@ -30,6 +30,7 @@ export const getRoutes = (store) => {
         <IndexRoute component={HomePage} />
         <Route path="/profile" component={ProfilePage} onEnter={requireAuth} />
         <Route path="/signup" component={SignupPage} />
+        <Route path="/signup/:provider" component={null} />
         <Route path="/courses" component={CoursesPage} />
         <Route path="/course" component={ManageCoursePage} />
         <Route path="/course/:id" component={ManageCoursePage} />
