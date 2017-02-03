@@ -10,12 +10,15 @@
         "ecmaVersion": 6,
         "sourceType": "module",
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "classes": true,
+            "defaultParams": true
         }
     },
     "env": {
         "es6": true,
         "browser": true,
+        "commonjs": true,
         "node": true,
         "jquery": true,
         "mocha": true
