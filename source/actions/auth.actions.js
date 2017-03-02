@@ -1,9 +1,7 @@
 import * as types from './action.types';
+import { beginAjaxCall, ajaxCallError } from './ajax.status.actions';
+
 import axios from 'axios';
-import {
-  beginAjaxCall,
-  ajaxCallError
-} from './ajax.status.actions';
 
 
 export function userSignupRequestSuccess() {
@@ -19,12 +17,6 @@ export function loadExternalLoginsSuccess(externalLogins) {
   };
 }
 
-
-const config = {
-  baseURL: 'http://localhost:7775/'
-};
-
-const clientHost = 'http://localhost:3000';
 
 // thunks
 export function userSignupRequest(userData) {
@@ -46,9 +38,13 @@ export function externalSignupRequest(url) {
   };
 }
 
+const config = {
+  baseURL: 'http://localhost:7775/'
+};
+
 export function loadLoginProviders() {
   return dispatch => {
-    return axios.get('/api/account/external-logins?returnUrl=' + clientHost, config)
+    return axios.get('/api/account/external-logins?returnUrl=' + 'http://localhost:3000', config)
       .then(res => {
         dispatch(loadExternalLoginsSuccess(res.data));
       });
