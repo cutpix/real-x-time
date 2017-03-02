@@ -13,6 +13,10 @@ class CoursesPage extends Component {
         this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this);
     }
 
+    componentWillMount() {
+        console.log('This would be a good time to call an action creator to fetch courses.');
+    }
+
     redirectToAddCoursePage(event) {
         event.preventDefault();
         browserHistory.push('/course');

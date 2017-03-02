@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import toastr from 'toastr';
+
 import * as authActions from '../../actions/auth.actions';
 import PageContent from '../common/page.content';
 import SignupForm from './signup.form';
 import ExternalLoginList from './external.login.list';
-import toastr from 'toastr';
 
 
 class SignupPage extends Component {
@@ -22,6 +23,14 @@ class SignupPage extends Component {
         this.signupUser = this.signupUser.bind(this);
         this.handleSocialSignup = this.handleSocialSignup.bind(this);
         this.redirect = this.redirect.bind(this);
+    }
+
+    componentDidMount() {
+        this.redirectIfAuth(this.props);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.redirectIfAuth(nextProps);
     }
 
     updateModelState(event) {
@@ -67,6 +76,18 @@ class SignupPage extends Component {
         this.context.router.push('/');
     }
 
+    redirectIfAuth(props) {
+        const {location, auth} = props;
+
+        if (auth.token) {
+            if (location.query.redirectTo) {
+                this.context.router.push(location.query.redirectTo);
+            } else {
+                this.context.router.push('/');
+            }
+        }
+    }
+
     render() {
         return (
             <PageContent>
@@ -85,6 +106,8 @@ class SignupPage extends Component {
     }
 }
 
+SignupPage.displayName = 'Signup';
+
 SignupPage.propTypes = {
     externalLogins: PropTypes.array.isRequired,
     model: PropTypes.object.isRequired,
@@ -100,7 +123,8 @@ function mapStateToProps(state, ownProps) {
 
     return {
         model,
-        externalLogins: state.externalLogins
+        externalLogins: state.externalLogins,
+        auth: state.auth
     };
 }
 
